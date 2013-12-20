@@ -23,29 +23,12 @@ module.exports = function (grunt) {
         // define the files to lint
         files: [
           'Gruntfile.js',
-          'test/**/*.js',
           'lib/**/*.js'
         ],
         // configure JSHint (documented at http://www.jshint.com/docs/)
         options: {
           jshintrc: '.jshintrc.json'
         }
-      },
-      // MOCHA
-      simplemocha: {
-        options: {
-          timeout:     3000,
-          ignoreLeaks: false,
-          ui:          'tdd',
-          reporter:    'dot'
-        },
-        all: {
-          src: ['test/**/*.js']
-        }
-      },
-      // CONCURRENT
-      concurrent: {
-        lintAndTest: ['jshint', 'simplemocha']
       }
     }
   );
@@ -53,14 +36,6 @@ module.exports = function (grunt) {
   // loading jshint
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  // loading mocha
-  grunt.loadNpmTasks('grunt-simple-mocha');
-
-  // loading concurrent
-  grunt.loadNpmTasks('grunt-concurrent');
-
-  // default task lints and tests the lib
-  grunt.registerTask(
-    'default', ['concurrent:lintAndTest']
-  );
+  // default task lints the lib
+  grunt.registerTask('default', 'jshint');
 };
