@@ -6,7 +6,7 @@
 [![NPM version](https://badge.fury.io/js/softlayer-documentation-nodejs-parser.png)](http://badge.fury.io/js/softlayer-documentation-nodejs-parser)
 [![NPM downloads](https://nodei.co/npm-dl/softlayer-documentation-nodejs-parser.png?months=1)](https://nodei.co/npm-dl/softlayer-documentation-nodejs-parser.png?months=1)
 
-softLayer Documentation Node.js parser that provides a simple method to parse SoftLayer documentation into json.
+SoftLayer Documentation Node.js parser that provides a simple method to parse SoftLayer documentation into json.
 
 ### Requirements
 Node.js v0.8.23 and up. Tested on v0.8.23 v0.8.25 v0.8.26 v0.10.18 v0.10.22 v0.11.9
